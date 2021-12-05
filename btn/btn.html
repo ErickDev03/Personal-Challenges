@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sub__Container">
+            <div class="cuadro">
+                <div class="colors qrt1"></div>
+                <div class="colors qrt2"></div>
+                <div class="colors qrt3"></div>
+            </div>
+                <div class="iron"></div>
+                <div class="circule"></div>
+
+        </div>
+
+    </div>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        background-color: rgba(0, 0, 255, 0.541);
+        width: 100%;
+        height: 100vh;
+        
+    }
+    .sub__Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        bottom: 130px;
+    }
+    .colors{
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 100%;
+        animation-duration: 20s;
+        transition: .3s;
+    }
+    .qrt1{
+        background: red;
+        animation-name: red__;
+        /* animation-duration: 9s; */
+        animation-iteration-count: infinite;
+    }
+
+    .qrt2{
+        background: yellow;
+        animation-name: yellow__;
+        /* animation-duration: 9s; */
+        animation-iteration-count: infinite;
+    }
+
+    .qrt3{
+        background: green;
+        animation-name: green__;
+        /* animation-duration: 9s; */
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes red__{
+        100%{
+            background-color: red;
+        }
+        50%{
+            background-color: yellow;
+        }
+        0%{
+            background-color: rgb(0, 255, 0);
+        }
+    }
+    @keyframes yellow__{
+        100%{
+            background-color: yellow;
+        }
+        50%{
+            background-color: rgb(0, 255, 0);
+        }
+        0%{
+            background-color: red;
+        }
+    }
+
+    @keyframes green__{
+        100%{
+            background-color: rgb(0, 255, 0);
+        }
+        50%{
+            background-color: red;
+        }
+        0%{
+            background-color: yellow;
+        }
+    }
+
+    .cuadro{
+        width: auto;
+        height: auto;
+        border: 5px solid black;
+        overflow: hidden;
+        background-color: lightgray;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+    .iron{
+        position:absolute;
+        bottom: -130px;
+        width: 20px;
+        height: 300px;
+        background-color: black;
+        z-index: 0;
+    }
+    .circule{
+        position: absolute;
+        bottom: -130px;
+        width: 150px;
+        height: 30px;
+        border-radius: 100px 100px 0 0;
+        background-color: lightgray;
+        z-index: 200;
+    }
+    </style>
+</body>
+</html>

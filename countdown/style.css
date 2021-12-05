@@ -1,0 +1,185 @@
+:root{
+    --color-one:  #006494;
+    --color-two:  #009DAE;
+    --color-fonts:  #fff;
+    --times-color: #001219
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--color-one)  -2.92%, var(--color-two) 125.23%);
+    background-repeat: no-repeat;
+}
+.container-countdown{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-fonts);
+    overflow: hidden;
+}
+.title {
+    position: absolute;
+    top: 60px;
+}
+.title h1{
+    font-size: 25px;
+}
+.title .name-creator{
+    font-size: 30px;
+}
+
+.all-times{
+    width: 70%;
+    /* height: fit-content; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+    bottom: 90px;
+}
+.day, .hour, .minute, .second{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+} 
+.times{
+    font-weight: 500;
+    font-size: 3rem;
+    z-index: 100;
+}
+
+.title-time{
+    font-size: larger;
+    color: var(--times-color);
+}
+.images-season{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.images-season img{
+    width: 550px;
+}
+.rectangulo{
+    height: 50px;
+    width: 100%;
+    background-color: #e6e6e6;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .title {
+        position: absolute;
+        top: 40px;
+    }
+    .title h1{
+        font-size: 20px;
+    }
+    .title .name-creator{
+        font-size: 25px;
+        /* text-decoration: underline; */
+    }
+    
+    .all-times{
+        width: 90%;
+        /* height: fit-content; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100;
+        position: relative;
+        bottom: 100px;
+    }
+    .day, .hour, .minute, .second{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    .times{
+        font-weight: 500;
+        font-size: 2rem;
+        z-index: 100;
+    }
+    
+    .title-time{
+        font-size: larger;
+        color: var(--times-color);
+    }
+    .images-season{
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+    .images-season img{
+        width: 450px;
+    }
+    .rectangulo{
+        height: 50px;
+        width: 100%;
+        background-color: #e6e6e6;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+    }
+}
+
+.copyright{
+    position: absolute;
+    bottom: 0;
+    color: var(--times-color);
+    z-index: 100;
+    font-size: 10px;
+    right: 0;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message{
+    transition: 3s;
+    position: relative;
+    bottom: 100px;
+    animation: message 3s infinite;
+}
+
+@keyframes message{
+    0%{
+        color: red;
+        font-size: 10px;
+        transform: rotateZ(-12deg);
+    }
+    25%{
+        color: yellow;
+        font-size: 15px;
+        transform: rotate(30deg);
+    }
+    50%{
+        color: blue;
+        font-size: 20px;
+    }
+    75%{
+        color: lightgreen;
+        font-size: 30px;
+        transform: rotate(-30deg);
+    } 
+    100%{
+        color: crimson;
+        transform: rotateZ(-12deg);
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo List</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente de los iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Fuente  de las letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Poppins:wght@500;600;700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/151869/isolated/preview/767ca771755f4675d4063c03e17c8595-icono-de-lista-de-verificacion-medica.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container" id="todo-list">
+        <h1 class="head-Title">Todo List By <span class="name">Erick Dev</span></h1>
+        <div class="add-todolist">
+            <form  id="form-todos">
+                <input type="text" id="todo" class="add-todo" value="" placeholder="What are you planning to do today?">
+                <button class="add" ><i class="fas fa-plus"></i></button>
+            </form>
+        </div>
+        <div class="todo-li" id="elemen">
+            <div class="add-todolist-new" id="active">
+                <h3 id="todo-title">Today I have a social exhibition</h3>
+            </div>
+            <div class="btn">
+                <button id="btn-check" class="btn-check"><i class="fas fa-check"></i></button>
+                <button id="btn-times"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

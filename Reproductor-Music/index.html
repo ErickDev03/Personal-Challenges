@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Player Sound</title>
+
+    <!-- estilos de reproductor -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente de los iconos de los controles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Fuente  de las letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Poppins:wght@500;600;700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="title-sound" id="title-sound"></h1>
+        <div class="img-sound">
+            <img src="" id="cover-sound">
+        </div>
+        <div class="bar-progress-container">
+            <div class="progress-bar-sound" id="progress-container">
+                <div class="bar-sound-pro" id="progress">
+    
+                </div>
+            </div>
+        </div>
+        <div class="container-timer">
+            <div class="timer">
+                <div class="inicio">
+                    <span id="Inicio">0</span>
+                    <span>:</span>
+                    <span id="Iniciosecon">00</span>
+                </div>
+                <div class="final">
+                    <span id="Final">0</span>
+                    <span>:</span>
+                    <span id="Finalsecon">00</span>
+                </div>
+            </div>
+        </div>
+        <audio src="Music/Vlad Gluschenko - Flamingo.m4a" id="audio"></audio>
+        <div class="controls">
+            <div class="controls-icon">
+                <button><i class="fas fa-backward" id="prev-sound"></i></button>
+                <button><i class="fas fa-pause" id="play-sound"></i></button>
+                <button><i class="fas fa-forward" id="next-sound"></i></button>
+            </div>
+        </div>
+        <div class="list-sound">
+            <ul id="listMusic">
+                
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
