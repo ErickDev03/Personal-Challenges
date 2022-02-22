@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculadora Salarial</title>
+
+    <!-- conexion de los estilos -->
+    <link rel="stylesheet" href="styleCalculator.css">
+</head>
+<body>
+    <div class="data_container">
+        <div class="header_title">
+            <h1>Datos del trabajador</h1>
+        </div>
+        <div class="data-employer">
+            <label for="name">
+                Nombre
+                <input type="text" placeholder="Ex: Juan" name="name">
+            </label>
+            <label for="age">
+                Edad
+                <input type="number" placeholder="Ex: 34" name="age">
+            </label>
+            <label for="title">
+                Titulación
+                <select name="title" id="">
+                    <option value="">Técnico</option>
+                    <option value="">Bachiller</option>
+                    <option value="">Licencido</option>
+                </select>
+            </label>
+            <label for="salary">
+                Salario Ordinario
+                <input type="number" placeholder="Ex: $1200" name="salary">
+            </label>
+            <label for="amount">
+                Monto Comisiones
+                <input type="number" placeholder="Ex: $1200" name="amount">
+            </label>
+            <label for="amount_hour">
+                Monto horas extra
+                <input type="number" placeholder="Ex: $1200" name="amount_hour">
+            </label>
+        </div>
+        <div class="btn">
+            <button class="calcular">Calcular</button>
+            <button class="cancelar">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Salida de los datos -->
+
+    <div class="data_container output_data">
+        <div class="header_title">
+            <h1>Cálculadora Salarial</h1>
+            <span>Costa Rica</span>
+            <img src="./img/CR_Flag.png">
+        </div>
+        <div class="container_salary">
+            <div class="subtitle">
+                <h3>Ingresos Salariales</h3>
+            </div>
+            <div class="res_salary">
+                <label for="Salary_ordinary">
+                    Salario ordinario
+                    <span name="Salary_ordinary"> 0 </span>
+                </label>
+                <label for="dedicacion_exclusiva">
+                    Dedicación Exclusiva
+                    <span name="dedicacion_exclusiva"> 0 </span>
+                </label>
+                <label for="comisiones">
+                    Comisiones
+                    <span name="comisiones"> 0 </span>
+                </label>
+                <label for="amount_hour_extra">
+                    Monto Horas extra
+                    <span name="amount_hour_extra"> 0 </span>
+                </label>
+                <label for="salary_neto">
+                    Salarió Neto
+                    <span name="salary_neto"> 0 </span>
+                </label>
+            </div>
+        </div>
+
+         <div class="container_deduciones">
+            <div class="subtitle">
+                <h3>Deducciones</h3>
+            </div>
+            <div class="res_deduciones">
+                <label for="salary_import">
+                    Impuesto del Salario
+                    <span name="salary_import"> 0 </span>
+                </label>
+                <label for="enfermedad">
+                    Enfermedad y Maternidad
+                    <span name="enfermedad"> 5.5% </span>
+                </label>
+                <label for="invalidez">
+                    Invalidez y Maternidad
+                    <span name="invalidez"> 3.84% </span>
+                </label>
+                <label for="aporte">
+                    Aporte Banco Popular
+                    <span name="aporte"> 1% </span>
+                </label>
+                <label for="asociacion">
+                    Asociación Solidarista
+                    <span name="asociacion"> 5% </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="container_total">
+            <div class="subtitle">
+                <h3>Totales</h3>
+            </div>
+            <div class="res_deduciones">
+                <label for="deduciones_total">
+                    Total de Deducciones
+                    <span name="deduciones_total"> 0 </span>
+                </label>
+                <label for="salario_neto_total">
+                    Salario neto
+                    <span name="salario_neto_total"> 0</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

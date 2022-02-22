@@ -1,0 +1,174 @@
+/* Fuente de las letras */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* Resteo */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: 'Poppins', sans-serif;
+
+	outline: none;
+	border: none;
+}
+body {
+	height: auto;
+	background-color: #d2e1e69f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.data_container {
+	background-color: rgb(255, 250, 250);
+	padding: 1rem;
+	width: 35rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 0.3rem 0.3rem 0 0;
+	overflow: hidden;
+	margin-top: 1rem;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.data_container .header_title {
+	color: #3a86ff;
+	width: 35rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-transform: uppercase;
+	flex-direction: column;
+	position: relative;
+	top: 2rem;
+}
+.data_container .header_title img {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	bottom: 2rem;
+}
+.data_container .data-employer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 20rem;
+	padding-top: 2rem;
+	flex-wrap: wrap;
+	width: 35rem;
+}
+.data_container .data-employer label {
+	padding: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	color: #00b4d8;
+}
+.data_container .data-employer input,
+select {
+	width: 15rem;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #00b4d8;
+	border-radius: 0.2rem;
+}
+.data_container .btn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.data_container .btn button {
+	width: 300px;
+	height: 50px;
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin: 0.5rem;
+	border-radius: 0.3rem;
+	color: white;
+	cursor: pointer;
+	transition: ease-out 0.3s;
+}
+
+.data_container .btn .calcular {
+	background-color: #09a3c2;
+	box-shadow: inset 0 0 0 0 #6ad654;
+}
+.data_container .btn .calcular:hover {
+	box-shadow: inset -250px 0 0 0 #6ad654;
+}
+
+.data_container .btn .cancelar {
+	background-color: #252525;
+	box-shadow: inset 0 0 0 0 #ef233c;
+}
+.data_container .btn .cancelar:hover {
+	box-shadow: inset 250px 0 0 0 #ef233c;
+}
+
+/* estilo de la salida de datos */
+
+.output_data {
+	margin: -2px;
+	border-radius: 0 0 0.3rem 0.3rem;
+	margin-bottom: 1rem;
+	border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+.output_data .header_title span {
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-bottom: 2rem;
+}
+.output_data .container_salary,
+.output_data .container_deduciones,
+.output_data .container_total {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 1rem;
+	border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+.container_salary .subtitle h3,
+.container_deduciones .subtitle h3 .container_total .subtitle h3 {
+	color: #252525;
+}
+
+.container_salary .res_salary,
+.container_deduciones .res_deduciones,
+.container_total .res_deduciones {
+	width: 29.5rem;
+	display: flex;
+	padding: 1rem;
+	flex-wrap: wrap;
+}
+.container_salary .res_salary label,
+.container_deduciones .res_deduciones label,
+.container_total .res_deduciones label {
+	padding: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	color: #00b4d8;
+	font-size: 1rem;
+}
+.container_salary .res_salary span,
+.container_deduciones .res_deduciones span,
+.container_total .res_deduciones span {
+	width: 200px;
+	border: 1px solid #00b4d8;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	color: #00b4d8;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.3rem;
+}
