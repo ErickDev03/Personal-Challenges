@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+
+    border: none;
+    outline: none;
+
+    /* Fonts */
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25rem;
+    width: 35rem;
+    background-color: honeydew;
+    border-radius: .3rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.container .header_title{
+    width: 100%;
+    position: relative;
+    bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(39, 36, 36, 0.4);
+    padding: 1rem;
+    color: rgb(7, 82, 243);
+}
+.container .score_life{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    bottom: 2.2rem;
+    padding: 1rem;
+}
+.enterNumber {
+    display: none;
+}
+.reset {
+    display: none;
+}
+.activeReset{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 2rem;
+}
+.container .guess{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+.container .guess label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+}
+.container .guess .value{
+    padding: .5rem;
+    margin-top: .5rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    transition: all .8s ease-in-out;
+}
+.container .guess .activ{
+    box-shadow: 1px 1px 10px rgba(40, 47, 148, 0.842);
+}
+.container .guess .active{
+    padding: .5rem;
+    box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.7);
+    border: 2px solid rgb(255, 0, 0);
+    transition: .5s ease-in-out;
+    animation: error .1s ease;
+}
+
+
+@keyframes error {
+    0%{
+        transform: translateX(-.5rem);
+    }
+    100%{
+        transform: translateX(.5rem);
+    }
+}
+
+.container .guess button{
+    padding: .8rem;
+    margin: .8rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #09a3c2;
+	box-shadow: inset 0 0 0 0 #6ad654;
+    transition: .3s ease-in-out;
+}
+.container .guess button:hover{
+    box-shadow: inset -250px 0 0 0 #6ad654;
+    color: white;
+}

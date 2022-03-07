@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Adivina Numero</title>
+		<!-- Style -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header_title">
+				<h1>Adivina el numero</h1>
+			</div>
+			<div class="score_life">
+				<span>Record: <span id="score"> 0 </span></span>
+				<span>Vida: <span id="life"> 0 </span></span>
+			</div>
+			<div class="enterNumber activeReset">
+				<h2>Numeros digitados</h2>
+				<h3 id="enterUser"> </h3>
+			</div>
+            <div class="reset">
+                <h2>El jego se reinicia en: </h2>
+                <span id="reset">  </span>
+            </div>
+			<div class="guess">
+				<label for="userNumber">
+					Digita tu numero...
+					<input type="text" class="value" placeholder="Digite un numero del 1 al 100" id="valueUser"/>
+				</label>
+				<button id="getData">Adivinar Numero</button>
+			</div>
+			<div class="message_away">
+				<h3 id="message">...</h3>
+			</div>
+		</div>
+		<!-- Main JS -->
+		<script src="./main.js"></script>
+	</body>
+</html>
