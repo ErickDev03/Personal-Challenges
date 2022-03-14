@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My TicTacToe</title>
+		<!-- Style Sheet -->
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="stest.css" />
+		<!-- <link rel="stylesheet" media="only screen and (max-width:768px)" href="responsive.css" /> -->
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>My Tic Tac Toe</h1>
+			</header>
+			<div class="anote">
+				<div class="playerX">
+					<h4>Player X: <span id="playerX">0</span></h4>
+				</div>
+				<div>
+					<h4 id="message">...</h4>
+				</div>
+				<div class="playerO">
+					<h4>Player O: <span id="playerO">0</span></h4>
+				</div>
+			</div>
+			<div class="canvas-game">
+				<div value="1">
+					<span></span>
+				</div>
+				<div value="2">
+					<span></span>
+				</div>
+				<div value="3">
+					<span></span>
+				</div>
+				<div value="4">
+					<span></span>
+				</div>
+				<div value="5">
+					<span></span>
+				</div>
+				<div value="6">
+					<span></span>
+				</div>
+				<div value="7">
+					<span></span>
+				</div>
+				<div value="8">
+					<span></span>
+				</div>
+				<div value="9">
+					<span></span>
+				</div>
+			</div>
+			<div class="option-user">
+				<div class="rol-user">
+					<h4>Player<span class="choice-defaul" id="choice-defaul">X</span></h4>
+				</div>
+				<div class="reset">
+					<button id="reset">Reset Game</button>
+				</div>
+			</div>
+			<small>
+				<h4>&copy 2022 - with <span class="love">💙</span> By Erick Dev</h4>
+				<ion-icon name="logo-github"></ion-icon
+				><a href="https://github.com/ErickDev03" target="_black"> Github</a>
+			</small>
+		</div>
+		<!-- JS -->
+		<script src="main.js"></script>
+		<!-- Icons -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>

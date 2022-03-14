@@ -1,0 +1,787 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+	--backColor: #359aec;
+	--fontColor: #fff;
+	--generalColor: #fff;
+	--boxShadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+	--borderRadius: 0.3rem;
+	--btnColor: #2bc051;
+}
+* {
+	/* Reset */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: 'Poppins', sans-serif;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--backColor);
+}
+.container header {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--generalColor);
+	box-shadow: var(--boxShadow);
+}
+.container header h1 {
+	font-weight: 700;
+	text-transform: uppercase;
+	/* color: ; */
+}
+/* Scores  game style*/
+.container .anote {
+	width: 40%;
+	height: 4rem;
+	margin-top: 1rem;
+	border-radius: 0.3rem 0.3rem 0 0;
+	background-color: var(--generalColor);
+	box-shadow: var(--boxShadow);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.container .anote .playerX,
+.container .anote .playerO {
+	width: 110px;
+	height: 40px;
+	background-color: var(--backColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--borderRadius);
+	color: var(--fontColor);
+	padding: 0.5rem;
+}
+.container .anote .playerO {
+	background-color: #ff0000;
+}
+/* Canvas Games */
+
+.container .canvas-game {
+	width: 40%;
+	height: 350px;
+	padding: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: var(--boxShadow);
+	border-radius: 0 0 0.3rem 0.3rem;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(3, 4rem);
+	gap: 1rem;
+	backdrop-filter: blur(30px);
+}
+.container .canvas-game div {
+	width: 75px;
+	height: 75px;
+	box-shadow: var(--boxShadow);
+	border-radius: var(--borderRadius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+	background-color: var(--generalColor);
+	overflow: hidden;
+}
+.container .canvas-game div .active {
+	font-size: 3.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #359aec;
+	transition: 0.3s ease-in-out;
+	animation: objetos 0.3s ease-in-out;
+}
+@keyframes objetos {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.container .option-user {
+	width: 40%;
+	height: 3rem;
+	background-color: var(--generalColor);
+	margin: 1rem;
+	border-radius: var(--borderRadius);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--boxShadow);
+}
+
+.container .option-user .rol-user .choice-defaul {
+	padding: 0.2rem 0.6rem;
+	background-color: #359aec;
+	color: var(--fontColor);
+	border-radius: var(--borderRadius);
+	margin: 0.4rem;
+}
+
+.container .option-user .reset {
+	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	padding-left: 0.3rem;
+}
+.container .option-user .reset button {
+	padding: 0.3rem 0.8rem;
+	border: none;
+	border-radius: var(--borderRadius);
+	background-color: var(--btnColor);
+	font-weight: 500;
+	color: var(--fontColor);
+	cursor: pointer;
+	font-size: 1.2rem;
+	box-shadow: inset 0 0 0 0;
+	transition: 0.8s ease-in-out;
+}
+.container .option-user .reset button:hover {
+	box-shadow: inset 0 150px 0 0 #ff0000;
+}
+/* Footer */
+small {
+	user-select: none;
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10rem;
+}
+small ion-icon {
+	font-size: 1rem;
+	color: var(--fontColor);
+	padding-left: 0.3rem;
+	position: relative;
+	bottom: 0.1rem;
+}
+small a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	color: var(--fontColor);
+}
+.love {
+	background-color: white;
+	border-radius: 0.1rem;
+}
+@media only screen and (max-width: 375px) {
+	.container {
+		width: 100%;
+		min-height: 40vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--backColor);
+	}
+	/* Scores  game style*/
+	.container .anote {
+		width: 90%;
+		height: 5rem;
+		margin-top: 1rem;
+		border-radius: 0.3rem 0.3rem 0 0;
+		background-color: var(--generalColor);
+		box-shadow: var(--boxShadow);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	}
+	.container .anote .playerX,
+	.container .anote .playerO {
+		width: 90px;
+		height: 35px;
+		background-color: var(--backColor);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: var(--borderRadius);
+		color: var(--fontColor);
+		padding: 0.5rem;
+		font-size: 0.8rem;
+	}
+	.container .anote .playerO {
+		background-color: #ff0000;
+	}
+	/* Canvas Games */
+
+	.container .canvas-game {
+		width: 90%;
+		height: 350px;
+		padding: 0.5rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: var(--boxShadow);
+		border-radius: 0 0 0.3rem 0.3rem;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		grid-template-columns: repeat(3, 4rem);
+		gap: 1rem;
+		backdrop-filter: blur(30px);
+	}
+	.container .canvas-game div {
+		width: 75px;
+		height: 75px;
+		box-shadow: var(--boxShadow);
+		border-radius: var(--borderRadius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+		cursor: pointer;
+		background-color: var(--generalColor);
+		overflow: hidden;
+	}
+	.container .canvas-game div .active {
+		font-size: 3.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #359aec;
+		transition: 0.3s ease-in-out;
+		animation: objetos 0.3s ease-in-out;
+	}
+	@keyframes objetos {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.container .option-user {
+		width: 60%;
+		height: 3rem;
+		background-color: var(--generalColor);
+		margin: 1rem;
+		border-radius: var(--borderRadius);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: var(--boxShadow);
+	}
+
+	.container .option-user .rol-user .choice-defaul {
+		padding: 0.2rem 0.4rem;
+		background-color: #359aec;
+		color: var(--fontColor);
+		border-radius: var(--borderRadius);
+		margin: 0.4rem;
+	}
+
+	.container .option-user .reset {
+		border-left: 1px solid rgba(0, 0, 0, 0.3);
+		padding-left: 0.3rem;
+	}
+	.container .option-user .reset button {
+		padding: 0.3rem 0.5rem;
+		border: none;
+		border-radius: var(--borderRadius);
+		background-color: var(--btnColor);
+		font-weight: 500;
+		color: var(--fontColor);
+		cursor: pointer;
+		font-size: 0.8rem;
+		box-shadow: inset 0 0 0 0;
+		transition: 0.8s ease-in-out;
+	}
+	.container .option-user .reset button:hover {
+		box-shadow: inset 0 150px 0 0 #ff0000;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--backColor);
+	}
+	.container header {
+		width: 100%;
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--generalColor);
+		box-shadow: var(--boxShadow);
+	}
+	.container header h1 {
+		font-weight: 700;
+		text-transform: uppercase;
+		/* color: ; */
+	}
+	/* Scores  game style*/
+	.container .anote {
+		width: 70%;
+		height: 5rem;
+		margin-top: 1rem;
+		border-radius: 0.3rem 0.3rem 0 0;
+		background-color: var(--generalColor);
+		box-shadow: var(--boxShadow);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	}
+	.container .anote .playerX,
+	.container .anote .playerO {
+		width: 110px;
+		height: 40px;
+		background-color: var(--backColor);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: var(--borderRadius);
+		color: var(--fontColor);
+		padding: 0.5rem;
+	}
+	.container .anote .playerO {
+		background-color: #ff0000;
+	}
+	/* Canvas Games */
+
+	.container .canvas-game {
+		width: 70%;
+		height: 350px;
+		padding: 0.5rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: var(--boxShadow);
+		border-radius: 0 0 0.3rem 0.3rem;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		grid-template-columns: repeat(3, 4rem);
+		gap: 1rem;
+		backdrop-filter: blur(30px);
+	}
+	.container .canvas-game div {
+		width: 75px;
+		height: 75px;
+		box-shadow: var(--boxShadow);
+		border-radius: var(--borderRadius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+		cursor: pointer;
+		background-color: var(--generalColor);
+		overflow: hidden;
+	}
+	.container .canvas-game div .active {
+		font-size: 3.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #359aec;
+		transition: 0.3s ease-in-out;
+		animation: objetos 0.3s ease-in-out;
+	}
+	@keyframes objetos {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.container .option-user {
+		width: 40%;
+		height: 3rem;
+		background-color: var(--generalColor);
+		margin: 1rem;
+		border-radius: var(--borderRadius);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: var(--boxShadow);
+	}
+
+	.container .option-user .rol-user .choice-defaul {
+		padding: 0.2rem 0.6rem;
+		background-color: #359aec;
+		color: var(--fontColor);
+		border-radius: var(--borderRadius);
+		margin: 0.4rem;
+	}
+
+	.container .option-user .reset {
+		border-left: 1px solid rgba(0, 0, 0, 0.3);
+		padding-left: 0.3rem;
+	}
+	.container .option-user .reset button {
+		padding: 0.3rem 0.8rem;
+		border: none;
+		border-radius: var(--borderRadius);
+		background-color: var(--btnColor);
+		font-weight: 500;
+		color: var(--fontColor);
+		cursor: pointer;
+		font-size: 1.2rem;
+		box-shadow: inset 0 0 0 0;
+		transition: 0.8s ease-in-out;
+	}
+	.container .option-user .reset button:hover {
+		box-shadow: inset 0 150px 0 0 #ff0000;
+	}
+}
+@media only screen and (max-width: 615px) {
+	.container {
+		width: 100%;
+		min-height: 40vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--backColor);
+	}
+	/* Scores  game style*/
+	.container .anote {
+		width: 90%;
+		height: 5rem;
+		margin-top: 1rem;
+		border-radius: 0.3rem 0.3rem 0 0;
+		background-color: var(--generalColor);
+		box-shadow: var(--boxShadow);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	}
+	.container .anote .playerX,
+	.container .anote .playerO {
+		width: 90px;
+		height: 35px;
+		background-color: var(--backColor);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: var(--borderRadius);
+		color: var(--fontColor);
+		padding: 0.5rem;
+		font-size: 0.8rem;
+	}
+	.container .anote .playerO {
+		background-color: #ff0000;
+	}
+	/* Canvas Games */
+
+	.container .canvas-game {
+		width: 90%;
+		height: 350px;
+		padding: 0.5rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: var(--boxShadow);
+		border-radius: 0 0 0.3rem 0.3rem;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		grid-template-columns: repeat(3, 4rem);
+		gap: 1rem;
+		backdrop-filter: blur(30px);
+	}
+	.container .canvas-game div {
+		width: 75px;
+		height: 75px;
+		box-shadow: var(--boxShadow);
+		border-radius: var(--borderRadius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+		cursor: pointer;
+		background-color: var(--generalColor);
+		overflow: hidden;
+	}
+	.container .canvas-game div .active {
+		font-size: 3.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #359aec;
+		transition: 0.3s ease-in-out;
+		animation: objetos 0.3s ease-in-out;
+	}
+	@keyframes objetos {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.container .option-user {
+		width: 60%;
+		height: 3rem;
+		background-color: var(--generalColor);
+		margin: 1rem;
+		border-radius: var(--borderRadius);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: var(--boxShadow);
+	}
+
+	.container .option-user .rol-user .choice-defaul {
+		padding: 0.2rem 0.4rem;
+		background-color: #359aec;
+		color: var(--fontColor);
+		border-radius: var(--borderRadius);
+		margin: 0.4rem;
+	}
+
+	.container .option-user .reset {
+		border-left: 1px solid rgba(0, 0, 0, 0.3);
+		padding-left: 0.3rem;
+	}
+	.container .option-user .reset button {
+		padding: 0.3rem 0.5rem;
+		border: none;
+		border-radius: var(--borderRadius);
+		background-color: var(--btnColor);
+		font-weight: 500;
+		color: var(--fontColor);
+		cursor: pointer;
+		font-size: 0.8rem;
+		box-shadow: inset 0 0 0 0;
+		transition: 0.8s ease-in-out;
+	}
+	.container .option-user .reset button:hover {
+		box-shadow: inset 0 150px 0 0 #ff0000;
+	}
+}
+@media only screen and (max-width: 345px) {
+	.container {
+		width: 100%;
+		min-height: 40vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--backColor);
+	}
+	/* Scores  game style*/
+	.container .anote {
+		width: 90%;
+		height: 5rem;
+		margin-top: 1rem;
+		border-radius: 0.3rem 0.3rem 0 0;
+		background-color: var(--generalColor);
+		box-shadow: var(--boxShadow);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	}
+	.container .anote .playerX,
+	.container .anote .playerO {
+		width: 90px;
+		height: 35px;
+		background-color: var(--backColor);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: var(--borderRadius);
+		color: var(--fontColor);
+		padding: 0.5rem;
+		font-size: 0.8rem;
+	}
+	.container .anote .playerO {
+		background-color: #ff0000;
+	}
+	/* Canvas Games */
+
+	.container .canvas-game {
+		width: 90%;
+		height: 350px;
+		padding: 0.5rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: var(--boxShadow);
+		border-radius: 0 0 0.3rem 0.3rem;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		grid-template-columns: repeat(3, 4rem);
+		gap: 1rem;
+		backdrop-filter: blur(30px);
+	}
+	.container .canvas-game div {
+		width: 75px;
+		height: 75px;
+		box-shadow: var(--boxShadow);
+		border-radius: var(--borderRadius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+		cursor: pointer;
+		background-color: var(--generalColor);
+		overflow: hidden;
+	}
+	.container .canvas-game div .active {
+		font-size: 3.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #359aec;
+		transition: 0.3s ease-in-out;
+		animation: objetos 0.3s ease-in-out;
+	}
+	@keyframes objetos {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.container .option-user {
+		width: 70%;
+		height: 3rem;
+		background-color: var(--generalColor);
+		margin: 1rem;
+		border-radius: var(--borderRadius);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: var(--boxShadow);
+	}
+
+	.container .option-user .rol-user .choice-defaul {
+		padding: 0.2rem 0.4rem;
+		background-color: #359aec;
+		color: var(--fontColor);
+		border-radius: var(--borderRadius);
+		margin: 0.4rem;
+	}
+
+	.container .option-user .reset {
+		border-left: 1px solid rgba(0, 0, 0, 0.3);
+		padding-left: 0.3rem;
+	}
+	.container .option-user .reset button {
+		padding: 0.3rem 0.5rem;
+		border: none;
+		border-radius: var(--borderRadius);
+		background-color: var(--btnColor);
+		font-weight: 500;
+		color: var(--fontColor);
+		cursor: pointer;
+		font-size: 0.8rem;
+		box-shadow: inset 0 0 0 0;
+		transition: 0.8s ease-in-out;
+	}
+	.container .option-user .reset button:hover {
+		box-shadow: inset 0 150px 0 0 #ff0000;
+	}
+}
+@media only screen and (max-width: 290px) {
+	.container {
+		width: 100%;
+		min-height: 40vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--backColor);
+	}
+	/* Scores  game style*/
+	.container .anote {
+		width: 90%;
+		height: 5rem;
+		margin-top: 1rem;
+		border-radius: 0.3rem 0.3rem 0 0;
+		background-color: var(--generalColor);
+		box-shadow: var(--boxShadow);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	}
+	.container .anote .playerX,
+	.container .anote .playerO {
+		width: 90px;
+		height: 35px;
+		background-color: var(--backColor);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: var(--borderRadius);
+		color: var(--fontColor);
+		padding: 0.5rem;
+		font-size: 0.8rem;
+	}
+	.container .anote .playerO {
+		background-color: #ff0000;
+	}
+	/* Canvas Games */
+
+	.container .canvas-game {
+		width: 90%;
+		height: 350px;
+		padding: 0.5rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: var(--boxShadow);
+		border-radius: 0 0 0.3rem 0.3rem;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		grid-template-columns: repeat(3, 4rem);
+		gap: 1rem;
+		backdrop-filter: blur(30px);
+	}
+	.container .canvas-game div {
+		width: 75px;
+		height: 75px;
+		box-shadow: var(--boxShadow);
+		border-radius: var(--borderRadius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+		cursor: pointer;
+		background-color: var(--generalColor);
+		overflow: hidden;
+	}
+	.container .canvas-game div .active {
+		font-size: 3.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #359aec;
+		transition: 0.3s ease-in-out;
+		animation: objetos 0.3s ease-in-out;
+	}
+	@keyframes objetos {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.container .option-user {
+		width: 80%;
+		height: 3rem;
+		background-color: var(--generalColor);
+		margin: 1rem;
+		border-radius: var(--borderRadius);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: var(--boxShadow);
+	}
+
+	.container .option-user .rol-user .choice-defaul {
+		padding: 0.2rem 0.4rem;
+		background-color: #359aec;
+		color: var(--fontColor);
+		border-radius: var(--borderRadius);
+		margin: 0.4rem;
+	}
+
+	.container .option-user .reset {
+		border-left: 1px solid rgba(0, 0, 0, 0.3);
+		padding-left: 0.3rem;
+	}
+	.container .option-user .reset button {
+		padding: 0.3rem 0.5rem;
+		border: none;
+		border-radius: var(--borderRadius);
+		background-color: var(--btnColor);
+		font-weight: 500;
+		color: var(--fontColor);
+		cursor: pointer;
+		font-size: 0.8rem;
+		box-shadow: inset 0 0 0 0;
+		transition: 0.8s ease-in-out;
+	}
+	.container .option-user .reset button:hover {
+		box-shadow: inset 0 150px 0 0 #ff0000;
+	}
+}
